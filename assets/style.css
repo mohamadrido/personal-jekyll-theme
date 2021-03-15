@@ -30,14 +30,14 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   outline: 0;
   display: inline-block;
   padding: 10px 25px;
-  color: #555;
-  background-color: #fff;
+  color: #efefef;
+  background-color: #ff0079;
   text-align: center;
   cursor: pointer;
 }
 .hero-text button:hover {
-  background-color: #efefef;
-  color: #333;
+  background-color: #f7004b;
+  color: #fff;
 }
 .footer {
   text-align: center;
