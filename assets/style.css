@@ -15,7 +15,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: hidden;
+  scrollbar-width: none;
 }
 .hero-text {
   text-align: center;
