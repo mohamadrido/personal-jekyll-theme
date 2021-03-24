@@ -13,8 +13,100 @@ layout: default
 <div style="padding: 15px;">
 <h3 style="text-align: center;">PORTOFOLIO</h3>
 <p>This example creates a full page background image. Try to resize the browser window to see how it always will cover the full screen (when scrolled to top), and that it scales nicely on all screen sizes.</p>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+    <a href="https://github.com/mohamadrido/cards-jekyll-theme-v2">
+    <img src="{{post.image}}">
+    <h3>Cards Jekyll Theme V2</h3>
+    <p>Responsive Column Cards </p>
+    </a>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+    <a href="https://github.com/mohamadrido/resume-jekyll-theme">
+    <img src="{{post.image}}">
+    <h3>Resume Jekyll Theme</h3>
+    <p>Responsive Two Column Layout </p>
+    </a>
+    </div>
+  </div>
+
+</div>
+
 </div>
 <div style="background: dodgerblue; padding: 15px; color: white;">
 <h3 style="text-align: center;">ADDRESS</h3>
 <p>Cental Java, Indonesia.</p>
 </div>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 0 10px;
+}
+
+.row {margin: 0 -5px;}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+    display: block;
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 0px;
+  }
+}
+
+.card {
+  border-radius: 5px;
+  box-shadow: 0 1px 2px 0 #555;
+  text-align: center;
+  background-color: #333;
+}
+
+.card:hover {
+  border-radius: 5px;
+  box-shadow: 0 1px 2px 0 #555;
+  text-align: center;
+  background-color: #2c2c2c;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.card h3 {
+  padding: 0px 16px 16px 16px;
+  font-weight: 300;
+}
+
+a {
+  color: #dedede;
+  text-decoration: none;
+}
+a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+</style>
