@@ -18,9 +18,9 @@ layout: default
   {% for post in paginator.posts %}
   <div class="column">
     <div class="card">
-    <a href="{{site.baseurl}}{{post.url}}">
-    <img src="{{post.image}}">
-    <h3>{{ post.title }}</h3>
+    <a style="text-decoration: none; " href="{{site.baseurl}}{{post.url}}">
+    <img style="width: 100%; border-radius: 5px;" src="{{post.image}}">
+    <h3 style="font-size: 1rem; font-weight: 400; color: #333;">{{ post.title }}</h3>
     </a>
     </div>
   </div>
