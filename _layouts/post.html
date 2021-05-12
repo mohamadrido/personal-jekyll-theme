@@ -68,3 +68,56 @@ layout: page
 <div class="clear">
 </article>
 </div>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 33.33%;
+  border-radius: 0px;
+  margin: 0 auto;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+  margin: 0 auto;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Responsive columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .row {
+    margin: 0 auto;
+}
+  .column {
+    width: 100%;
+    display: block;
+  }
+
+/* Style the counter cards */
+.card {
+  padding: 10px 15px;
+  text-align: left;
+  background-color: #fff;
+  color: #333;
+}
+img {
+  border-radius: 5px;
+  width: 100%;
+}
+</style>
