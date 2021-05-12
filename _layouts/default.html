@@ -14,9 +14,24 @@
 <header>
 </header>
 {{ content }}
-<footer class="footer">
-&copy; 2021 {{site.name}} - Design by <a style="color: #555; text-decoration: none;" href="https://mohamadrido.com">Mohamad Rido</a>
+<footer style="text-align: center; padding: 16px;">
+<!-- Social footer -->
+<a target="_blank" href="https://linkedin.com/in/mohamadrido"><i class="fab fa-linkedin"></i></a>
+<a target="_blank" href="https://github.com/mohamadrido"><i class="fab fa-github"></i></a>
+<a target="_blank" href="https://t.me/mohamadrido"><i class="fab fa-telegram"></i></a>
+<br/>
+<!-- Footer credit -->
+<div style="color: #6c757d;">
+&copy; 2021 - <span id="pdm"></span> {{site.name}}
+</div>
+<script>
+document.getElementById("pdm").innerHTML = new Date().getFullYear();
+</script>
 </footer>
+  
+<!--footer class="footer">
+&copy; 2021 {{site.name}} - Design by <a style="color: #555; text-decoration: none;" href="https://mohamadrido.com">Mohamad Rido</a>
+</footer-->
 <script src="https://mohamadrido.com/assets/topnav.js"></script>
 </body>
 </html>
