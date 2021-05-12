@@ -15,27 +15,29 @@ layout: default
 <p>This example creates a full page background image. Try to resize the browser window to see how it always will cover the full screen (when scrolled to top), and that it scales nicely on all screen sizes.</p>
 
 <div class="row">
+  {% for post in paginator.posts %}
   <div class="column">
     <div class="card">
-    <a href="https://github.com/mohamadrido/cards-jekyll-theme-v2">
-    <img src="/personal-jekyll-theme/cards-jekyll-theme-v2.png">
-    <h3>Cards Jekyll Theme V2</h3>
-    <p style="padding: 0px 16px 15px 16px;">Responsive Column Cards </p>
+    <a href="{{site.baseurl}}{{post.url}}">
+    <img src="{{post.image}}">
+    <h3>{{ post.title }}</h3>
     </a>
     </div>
   </div>
-
-  <div class="column">
-    <div class="card">
-    <a href="https://github.com/mohamadrido/resume-jekyll-theme">
-    <img src="/personal-jekyll-theme/resume-jekyll-theme.png">
-    <h3>Resume Jekyll Theme</h3>
-    <p style="padding: 0px 16px 15px 16px;">Responsive Two Column Layout </p>
-    </a>
-    </div>
-  </div>
-
+  {% endfor %}
 </div>
+<br/>
+{% if paginator.previous_page %}
+{% if paginator.previous_page == 1 %}
+<a style="color: #444;" href="{{site.baseurl}}/{{ include.basepath }}" title="Previous Page"><svg height='14' viewBox='0 0 18 18' width='14'><path d='M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z' color='#555'/></svg> Newer</a>
+{% else %}
+<a style="color: #444;" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" title="Previous Page"><svg height='14' viewBox='0 0 18 18' width='14'><path d='M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z' color='#555'/></svg> Prev</a>
+{% endif %}
+{% endif %}
+<span style="color: #555;"> &nbsp; &nbsp; Page {{paginator.page}} of {{paginator.total_pages}} &nbsp; &nbsp; </span>
+{% if paginator.next_page %} 
+<a style="color: #444;" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" title="Next Page">Older <svg height='14' viewBox='0 0 18 18' width='14'><path d='M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z' color='#555'/></svg></a>
+{% endif %} 
 
 </div>
 <!-- Maps -->
@@ -90,7 +92,7 @@ style: 'mapbox://styles/mapbox/streets-v11'
 
 .card {
   border-radius: 5px;
-  box-shadow: 0 1px 2px 0 #555;
+  box-shadow: 0 1px 2px 0 #999;
   text-align: center;
   background-color: #fff;
 }
