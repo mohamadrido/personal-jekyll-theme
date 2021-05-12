@@ -1,6 +1,7 @@
 ---
 layout: page
 ---
+<div class="container">
 <article>
 {% if page.image %} 
 <img style="width: 100%;" src="{{ page.image }}">
@@ -49,14 +50,12 @@ layout: page
 
     {% if sameTagCount >= minCommonTags %}
 
-  <div class="column">
-    <div class="card">
-          <a href="{{ site.baseurl }}{{ post.url }}">
-              <div class="rel">
-                <img width="100%" src="{{post.image}}">
-                <h3>{{ post.title }}</h3>
-              </div>
-          </a>
+  <div class="column" style="border-color: none;">
+    <div class="card" style="border-color: #fff;">
+    <a style="text-decoration: none;" href="{{site.baseurl}}{{post.url}}">
+    <img src="{{post.image}}">
+    <h3 style="font-size: 1rem; font-weight: 400; color: #333;">{{ post.title }}</h3>
+    </a>
     </div>
   </div>
 
@@ -68,3 +67,4 @@ layout: page
   {% endfor %}
 <div class="clear">
 </article>
+</div>
