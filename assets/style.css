@@ -46,18 +46,38 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   padding: 15px;
   font-size: 12px;
 }
+
 * {
   box-sizing: border-box;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+a:hover {
+  color: #007bff;
+  text-decoration: none;
+}
+.main {
+  margin: 0 auto;
+}
+.container {
+  margin: 15px auto;
+  padding: 15px;
 }
 /* Float four columns side by side */
 .column {
   float: left;
   width: 33.33%;
-  padding: 0 10px;
+  border-radius: 0px;
+  margin: 0 auto;
 }
 
 /* Remove extra left and right margins, due to padding */
-.row {margin: 0 -5px;}
+.row {
+  margin: 0 auto;
+}
 
 /* Clear floats after the columns */
 .row:after {
@@ -68,25 +88,28 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .topnav {
   overflow: hidden;
+  background-color: #fff;
+  border-bottom: 1px solid #f1f1f1;
 }
 
 .topnav a {
   float: left;
   display: block;
-  color: #555;
+  color: #333;
   text-align: center;
-  padding: 5px;
+  padding: 14px 16px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 17px;
 }
 
 .topnav a:hover {
-  color: #333;
+  background-color: #fff;
+  color: #007bff;
 }
 
 .topnav a.active {
+  background-color: #fff;
   color: #333;
-  text-decoration: none;
 }
 
 .topnav .icon {
@@ -102,15 +125,16 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   .column {
     width: 50%;
     display: block;
-    margin-bottom: 0px;
   }
 }
 
 @media screen and (max-width: 600px) {
+  .row {
+    margin: 0 auto;
+}
   .column {
     width: 100%;
     display: block;
-    margin-bottom: 0px;
   }
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
@@ -119,7 +143,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   }
   .header-right {
   float: none;
-  }
+}
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
@@ -135,34 +159,12 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 /* Style the counter cards */
 .card {
-  border-radius: 5px;
-  box-shadow: 0 1px 2px 0 #999;
-  text-align: center;
+  padding: 10px 15px;
+  text-align: left;
   background-color: #fff;
-}
-
-.card:hover {
-  border-radius: 5px;
-  box-shadow: 0 1px 2px 0 #555;
-  text-align: center;
-  background-color: #fff;
-}
-
-.card img {
-  width: 100%;
-  border-radius: 5px 5px 0px 0px;
-}
-
-.card h3 {
-  padding: 0px 16px 16px 16px;
-  font-weight: 300;
-}
-
-a {
-  color: #555;
-  text-decoration: none;
-}
-a:hover {
   color: #333;
-  text-decoration: underline;
+}
+img {
+  border-radius: 5px;
+  width: 100%;
 }
