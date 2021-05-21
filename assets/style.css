@@ -88,8 +88,8 @@ a:hover {
 
 .topnav {
   overflow: hidden;
-  background-color: #fff;
-  border-bottom: 1px solid #f1f1f1;
+  background-color: #333;
+  border-bottom: 1px solid #333;
 }
 
 .topnav a {
@@ -103,7 +103,7 @@ a:hover {
 }
 
 .topnav a:hover {
-  background-color: #fff;
+  background-color: #555;
   color: #007bff;
 }
 
