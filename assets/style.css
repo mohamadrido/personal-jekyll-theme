@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-weight:300;
 }
 .hero-image {
-  background-image: url("https://images.pexels.com/photos/2261017/pexels-photo-2261017.jpeg");
+  background-image: url("https://mohamadrido.github.io/personal-jekyll-theme/assets/pexels-photo-2261017.jpeg");
   height: 100%; 
   background-position: center;
   background-repeat: no-repeat;
